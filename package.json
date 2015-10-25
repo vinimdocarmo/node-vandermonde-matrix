@@ -1,6 +1,6 @@
 {
   "name": "vandermonde-matrix",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vandermonde Matrix",
   "license": "MIT",
   "repository": "vinimdocarmo/node-vandermonde-matrix",
