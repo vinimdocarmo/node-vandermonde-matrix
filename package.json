@@ -19,7 +19,8 @@
     "index.js"
   ],
   "keywords": [
-    ""
+    "matrix",
+    "vandermonde"
   ],
   "dependencies": {},
   "devDependencies": {
