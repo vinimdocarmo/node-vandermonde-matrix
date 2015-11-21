@@ -1,5 +1,7 @@
 'use strict';
 
+var _ = require('underscore');
+
 /**
  *
  * @param {Array} terms
@@ -8,23 +10,13 @@
  */
 module.exports = function (terms, degree) {
 	if (!terms || !degree || !(terms instanceof Array) || typeof degree !== 'number') {
-		throw new TypeError('You must provide a array of terms as the first argument and a number degree');
+		throw new TypeError('You must provide a array of terms as the first argument and a number degree as the second one');
 	}
 
-	var vandermondeMatrix = [],
-	    term,
-	    row;
+	return _.map(terms, function (xi) {
+		return _.map(_.range(degree), function (pow) {
+			return Math.pow(xi, pow);
+		});
+	});
 
-	for (var j = 0; j < terms.length; j++) {
-		term = terms[j];
-		row = [];
-
-		for (var i = 0; i <  degree; i++) {
-			row.push(Math.pow(term, i));
-		}
-
-		vandermondeMatrix.push(row);
-	}
-
-	return vandermondeMatrix;
 };

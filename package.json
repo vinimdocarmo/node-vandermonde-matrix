@@ -22,7 +22,9 @@
     "matrix",
     "vandermonde"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "underscore": "^1.8.3"
+  },
   "devDependencies": {
     "mocha": "*"
   }
